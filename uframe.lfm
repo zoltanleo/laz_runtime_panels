@@ -1,7 +1,71 @@
 object frmFrame: TfrmFrame
   Left = 383
-  Height = 240
+  Height = 80
   Top = 31
-  Width = 320
+  Width = 262
   Caption = 'frmFrame'
+  ClientHeight = 80
+  ClientWidth = 262
+  Color = clCream
+  OnShow = FormShow
+  object ComboBox1: TComboBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = btnLeft
+    Left = 10
+    Height = 23
+    Top = 10
+    Width = 165
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 10
+    BorderSpacing.Top = 10
+    BorderSpacing.Right = 10
+    ItemHeight = 15
+    TabOrder = 0
+    Text = 'ComboBox1'
+  end
+  object btnLeft: TButton
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideRight.Control = btnRight
+    AnchorSideBottom.Control = ComboBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 185
+    Height = 23
+    Top = 10
+    Width = 35
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 5
+    Caption = 'L'
+    TabOrder = 1
+  end
+  object btnRight: TButton
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ComboBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 225
+    Height = 23
+    Top = 10
+    Width = 27
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 10
+    Caption = 'R'
+    TabOrder = 2
+  end
+  object Bevel1: TBevel
+    AnchorSideLeft.Control = ComboBox1
+    AnchorSideTop.Control = ComboBox1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = btnLeft
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 2
+    Top = 43
+    Width = 210
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    BorderSpacing.Bottom = 20
+  end
 end
