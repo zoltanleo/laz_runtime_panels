@@ -101,10 +101,10 @@ begin
           btnLeft.Enabled:=
             not currFrame.Equals(FrameList.First);
 
-          btnPnlRight.Caption:= '+';
-          btnPnlRight.OnClick:= @ActFrameAddExecute;
-          btnPnlLeft.Caption:= '-';
-          btnPnlLeft.OnClick:= @ActFrameDelExecute;
+          btnRight.Caption:= '+';
+          btnRight.OnClick:= @ActFrameAddExecute;
+          btnLeft.Caption:= '-';
+          btnLeft.OnClick:= @ActFrameDelExecute;
           {$ENDIF}
 
           Visible:= True;
